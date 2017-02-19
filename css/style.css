@@ -473,7 +473,7 @@ h4 {
 .social {
   width: 80%
 }
-.social > img {
+.social a img {
   float: right;
 }
 
