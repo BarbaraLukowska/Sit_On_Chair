@@ -5,6 +5,9 @@
     <title>CodersLab</title>
     <meta name="description" content="Strona z własnym projektem, na podstawie Coders Lab">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/app.js">
+
+    </script>
 </head>
 <body>
   <main>
@@ -16,31 +19,46 @@
 
         <nav class="menu">
           <ul>
-            <li>O firmie</li>
-            <li>Galeria</li>
-            <li>Kontakt</li>
+            <li><a href="#" class="nav-link">O firmie</a>
+              <ul>
+                <div class="arrow">
+                </div>
+                <li><a href="#" class="nav-link">Aktualności</a></li>
+                <li><a href="#" class="nav-link">Nasz team</a></li>
+                <li><a href="#" class="nav-link">Historia</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="nav-link">Galeria</a>
+              <ul>
+                <div class="arrow">
+                </div>
+                <li><a href="#" class="nav-link">Kolekcja 2015</a></li>
+                <li><a href="#" class="nav-link">Kolekcja 2016</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="nav-link">Kontakt</a></li>
           </ul>
           </div>
-          <div id="navigation-square">
-            <ul>
-              <li>Aktualności</li>
-              <li>Nasz team</li>
-              <li>Historia</li>
-            </ul>
-        </nav>
-      </div>
     </header>
 
     <section id="chair-description">
       <div class="container clearfix">
 
-        <div class="chair chair-pic">
-          <img src="images/left-angle-bracket.png" id="left">
-
+        <div class="chair">
+          <ul class="slider">
+            <li><img src="images/black_chair.png" alt="Black chair"></li>
+            <li><img src="images/orange.png"></li>
+            <li><img src="images/red.png"></li>
+          </ul>
+          <a href="#">
+            <img src="images/left-angle-bracket.png" id="prev">
+          </a>
         </div>
 
         <div class="chair lead">
-                    <img src="images/play-symbol.png" id="right">
+          <a href="#">
+            <img src="images/play-symbol.png" id="next">
+          </a>
           <h1>
             Sit <span>on</span> our <span>chair</span>
           </h1>
@@ -72,12 +90,14 @@
           <div class="sub-line">
           </div>
         </div>
+
         <div class="box inputs">
           <p>
             Finds all inputs
+            <div class="sub-line">
+            </div>
           </p>
-          <div class="sub-line">
-          </div>
+
           <p>
             Finds all inputs that are not checked and highligts the next sibling span. Notice there is no change when clickingthe checkboxes since no click events have been linked.
           </p> <br>
@@ -128,7 +148,7 @@
         </div>
 
         <!-- Box 2 -->
-        <div class="price-plans">
+        <div class="price-plans option-two">
           <div class="big-circle">
             <div class="small-circle">
             </div>
@@ -222,7 +242,7 @@
             </div>
 
             <div class="checkbox clearfix">
-              <input type="checkbox" id="agree">
+              <input type="checkbox" id="agree" name="check">
               <h4>
                 Zgadzam się na przetwarzanie danych osobowych
               </h4>

@@ -59,22 +59,35 @@
   display: inline-block;
   padding: 10px 40px 10px 0;
   line-height: 20px;
-  /*border: 1px solid white;*/
+  position: relative;
 }
 
-#navigation-square {
-  width: 120px;
-  height: 100px;
-  background-color: #000000;
+.nav-link {
+  text-decoration: none;
   color: #ffffff;
-  position: absolute;
-  left: 1155px;
-  margin-top: 10px;
-  line-height: 28px;
-  padding: 10px 15px 10px 15px;
 }
-#navigation-square > ul > li {
+.menu > ul > li > ul {
+  width: 130px;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: black;
+  padding: 10px 0px 10px 15px;
+  position: absolute;
+  top: 55px;
+  left: -30px;
+  display: none;
   list-style-type: none;
+  text-align: left;
+  text-transform: none;
+}
+.arrow {
+  border: 12px solid transparent;
+  border-bottom: 12px solid black;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -24px;
+  left: 50px;
 }
 
 /*Section 1: chair description*/
@@ -89,28 +102,39 @@
   width: 50%;
   height: 400px;
   float: left;
-  margin-top: 55px;
-  /*border: 1px solid;*/
+  margin-top: 90px;
   position: relative;
 }
-
-.chair-pic {
-  background-image: url('../images/black_chair.png');
+ /*Slider*/
+.slider img {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.chair #left {
+
+.slider ul{
+  list-style: none;
+}
+
+.slider li{
+  display: none;
+}
+.slider .visible {
+  display: block;
+}
+
+#prev {
   width: 50px;
   height: 50px;
   position: absolute;
   bottom: 100px;
-  top: 168px;
+  top: 140px;
 }
-.lead #right {
+
+#next {
   width: 50px;
   height: 50px;
   position: absolute;
-  bottom: 183px;
+  bottom: 215px;
   right: 5px;
 }
 
@@ -132,7 +156,7 @@ h1 > span {
   color: #14B897;
 }
 .chair > p {
-  margin: 35px 30px 30px 30px;
+  margin: 20px 10px 20px 10px;
   font-size: 16px;
   line-height: 25px;
 }
@@ -154,7 +178,6 @@ h1 > span {
 #products {
   width: 100%;
   height: 370px;
-  /*border: 1px solid;*/
 }
 
 .box {
@@ -172,6 +195,7 @@ h1 > span {
   background-image: url('../images/box1_img.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 .pic2 {
   background-image: url('../images/box2_img.jpg');
@@ -234,7 +258,7 @@ h1 > span {
 }
 
 .sub-line-long {
-  width: 33%;
+  width: 30%;
   height: 8px;
   background-color: #14B897;
   margin: 5px 0 60px 0;`
@@ -272,14 +296,40 @@ h1 > span {
   margin-right: 25px;
 }
 
+/*Price plan nr2*/
+.price-plans:nth-child(2n+2) {
+    background-color: #14B897;
+    color: #ffffff;
+}
+.option-two .big-circle {
+  background-color: #14B897;
+  border: 1px solid #14B897;
+}
+.option-two .small-circle {
+  background-color: #ffffff;
+}
+
+.option-two .price-sup {
+  background-color: white;
+  color: #14B897;
+  border: 1px solid #ffffff;
+}
+.option-two .price-conditions {
+  color: #9e9e9e;
+}
+.option-two .join {
+  background-color: #ffffff;
+  color: #14B897;
+}
+
 .price-plans > p {
   text-transform: uppercase;
   font-size: 22px;
-  color: #14B897;
   text-align: center;
   padding: 30px 0 20px 0;
   font-weight: 600;
 }
+
 
 .price-sup {
   border: 2px solid #d2d2d2;
@@ -305,12 +355,13 @@ h1 > span {
   line-height: 42px;
   margin: 35px auto;
 }
-.price-conditions > p:first-child {
+.price-conditions > p:nth-child(2n+1) {
   background-color: #e6e6e6;
 }
-.price-conditions > p:nth-child(2) {
+.price-conditions > p:nth-child(2n+2) {
   background-color: #f5f5f5;
 }
+
 .join {
   width: 35%;
   height: 35px;
@@ -330,7 +381,6 @@ h1 > span {
 #contact {
   width: 100%;
   height: 630px;
-  /*border: 1px solid yellow;*/
 }
 
 .contact {
@@ -392,12 +442,20 @@ h4 {
   color: #969393;
 }
 
+
 #agree {
   width: 40px;
   height: 40px;
   float: left;
   margin-right: 10px;
 }
+/*
+#agree:checked:before {
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/form_ok.jpg');
+  background-size: contain;
+}*/
 
 /*Footer*/
 #footer-info {
@@ -405,10 +463,9 @@ h4 {
   height: 110px;
   background-color: #ffffff;
   color: #9e9e9e;
-  /*border: 1px solid;*/
 }
+
 .footer {
-  /*border: 1px solid;*/
   display: inline-block;
   vertical-align: bottom;
 }
@@ -424,11 +481,9 @@ h4 {
   width: 19%;
   font-size: 20px;
   text-transform: uppercase;
-  /*border: 1px solid;*/
   text-align: right;
 }
 
 .footer-logo > span {
   font-weight: 900;
-  /*border: 1px solid;*/
 }
