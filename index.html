@@ -44,7 +44,7 @@
     <section id="chair-description">
       <div class="container clearfix">
 
-        <div class="chair">
+        <div class="chair chair-slider">
           <ul class="slider">
             <li><img src="images/black_chair.png" alt="Black chair"></li>
             <li><img src="images/orange.png"></li>
@@ -68,7 +68,6 @@
           <div class="see-more">
             Zobacz więcej
           </div>
-
         </div>
       </div>
     </section>
@@ -100,7 +99,8 @@
 
           <p>
             Finds all inputs that are not checked and highligts the next sibling span. Notice there is no change when clickingthe checkboxes since no click events have been linked.
-          </p> <br>
+          </p>
+            <br>
           <p>
             Notice there is no change when clicking the checkboxes since no click events have been.
           </p>
@@ -142,9 +142,11 @@
               Serwis
             </p>
           </div>
-          <div class="join">
-            Dołącz
-          </div>
+          <a href="#">
+            <div class="join">
+              Dołącz
+            </div>
+          </a>
         </div>
 
         <!-- Box 2 -->
@@ -175,9 +177,11 @@
               Gwarancja 5 lat
             </p>
           </div>
-          <div class="join">
-            Dołącz
-          </div>
+          <a href="#">
+            <div class="join">
+              Dołącz
+            </div>
+          </a>
         </div>
 
         <!-- Box 3 -->
@@ -211,9 +215,11 @@
               Porady projektanta
             </p>
           </div>
-          <div class="join">
-            Dołącz
-          </div>
+          <a href="#">
+            <div class="join">
+              Dołącz
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -240,13 +246,11 @@
             <div class="red-chair">
               <img src="images/red_chair.png">
             </div>
-
-            <div class="checkbox clearfix">
-              <input type="checkbox" id="agree" name="check">
-              <h4>
+            <input type="checkbox" id="agree" name="check" checked/>
+            <label for="agree">
+              <span> </span>
                 Zgadzam się na przetwarzanie danych osobowych
-              </h4>
-            </div>
+            </label>
 
             <div class="submit">
               <input type="submit" name="submit" value="Wyślij">
@@ -257,7 +261,7 @@
     </section>
   </main>
     <footer id="footer-info">
-      <div class="container">
+      <div class="container clearfix">
         <div class="footer social">
           Copyright 2014 | All rights reserved - Sit On Chair
           <a href="#"><img src="images/flickr.png"></a>
