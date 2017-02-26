@@ -1,5 +1,4 @@
 function chairCalc() {
-  //  var application = document.querySelector('.application');
    var dropDownLi = document.querySelectorAll('.drop_down_list');
    var transport = document.querySelector('#transport');
    console.log(transport);
@@ -24,15 +23,13 @@ function chairCalc() {
    // 2.Dodaję event by po kliknięciu w strzałkę rozwijał się dropdown.
   for (var i = 0; i < dropDownLi.length; i++) {
     dropDownLi[i].querySelector('.list_arrow').addEventListener('click', showAndHide);
-    dropDownLi[i].dataset.option = "";
-    dropDownLi[i].dataset.price = "";
   }
 
   var listPanelLi = document.querySelectorAll('.list_panel li');
   // Dodaje eventy: do opcji wyboru i do podsumowania(ceny)
   for (var i = 0; i < listPanelLi.length; i++) {
     listPanelLi[i].addEventListener('click', choice);
-    listPanelLi[i].addEventListener('click', summary)
+    listPanelLi[i].addEventListener('click', summary);
   }
 
   function choice() {
