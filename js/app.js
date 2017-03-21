@@ -22,7 +22,6 @@ function workshops () {
     mainNav[i].addEventListener('mouseover', show);
     mainNav[i].addEventListener('mouseout', hide);
   }
-  // ta funkcjonalność nie jest do końca ok, bo kontenerek z podlistą znika mi jak najadę na link 'Historia'. Nie wiem dlaczego tak się dzieje, bo teoretycznie cała lista ul jest display - block lub display - none, w zaleznosci od najechania myszką, wię teoretycznie nie powinno znikać.
 
 // Slider:
      var buttonNext = document.querySelector('#next');
